@@ -16,5 +16,59 @@ namespace ProjetoModulo4
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Trim().Equals(String.Empty))
+            {
+                MessageBox.Show("Voce devera digitar algum valor", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Focus();
+                return;
+            }
+            int iValorlido = Convert.ToInt32(textBox1.Text.Trim());
+            int i = 0;
+            listView1.Items.Clear();
+            /*for (int i = 0; i <= 10; i++)
+            {
+                ListViewItem itmx = listView1.Items.Add(iValorlido.ToString());
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "*"));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, i.ToString()));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "="));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, (iValorlido * i).ToString()));
+
+            }*/
+            while (i <=10)
+            {
+                ListViewItem itmx = listView1.Items.Add(iValorlido.ToString());
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "*"));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, i.ToString()));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "="));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, (iValorlido * i).ToString()));
+                i++;
+            }
+
+        }
+
+        private void FormEstruturasRepeticao_Load(object sender, EventArgs e)
+        {
+            int i = 0;
+            listView1.Clear();
+
+            listView1.Columns.Insert(0, "Valor", 100, HorizontalAlignment.Center);
+            listView1.Columns.Insert(1, "sinal", 100, HorizontalAlignment.Center);
+            listView1.Columns.Insert(2, "Valor", 100, HorizontalAlignment.Center);
+            listView1.Columns.Insert(3, "igual", 100, HorizontalAlignment.Center);
+            listView1.Columns.Insert(4, "resultado", 100, HorizontalAlignment.Center);
+
+            /*for (int i = 0; i <= 100; i++)
+            {
+                comboBox1.Items.Add(i.ToString());
+            }*/
+            while(i <= 100)
+            {
+                comboBox1.Items.Add(i.ToString());
+                i++;
+            }
+        }
     }
 }
