@@ -12,6 +12,8 @@ namespace ProjetoModulo4
 {
     public partial class FormEstruturasRepeticao : Form
     {
+        private List<int> lista = new List<int>();
+
         public FormEstruturasRepeticao()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace ProjetoModulo4
                 itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, (iValorlido * i).ToString()));
 
             }*/
-            while (i <=10)
+            /*while (i <=10)
             {
                 ListViewItem itmx = listView1.Items.Add(iValorlido.ToString());
                 itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "*"));
@@ -45,8 +47,16 @@ namespace ProjetoModulo4
                 itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "="));
                 itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, (iValorlido * i).ToString()));
                 i++;
-            }
-
+            }*/
+            do
+            {
+                ListViewItem itmx = listView1.Items.Add(iValorlido.ToString());
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "*"));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, i.ToString()));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, "="));
+                itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, (iValorlido * i).ToString()));
+                i++;
+            } while (i <= 10);
         }
 
         private void FormEstruturasRepeticao_Load(object sender, EventArgs e)
@@ -64,10 +74,34 @@ namespace ProjetoModulo4
             {
                 comboBox1.Items.Add(i.ToString());
             }*/
-            while(i <= 100)
+            do
             {
                 comboBox1.Items.Add(i.ToString());
                 i++;
+            } while (i <= 100);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Trim().Equals(String.Empty))
+            {
+                MessageBox.Show("Voce deve informar um valor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox2.Focus();
+                return;
+            }
+            lista.Add(Convert.ToInt32(textBox2.Text.Trim()));
+            listBox1.Items.Add(textBox2.Text.Trim());
+            textBox2.Text = String.Empty;
+            textBox2.Focus();
+                
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (String item in listBox1.Items)
+            {
+                listBox2.Items.Add(item.ToString());
             }
         }
     }
