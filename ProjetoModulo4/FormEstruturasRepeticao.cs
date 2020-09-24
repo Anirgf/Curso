@@ -57,6 +57,46 @@ namespace ProjetoModulo4
                 itmx.SubItems.Add(new ListViewItem.ListViewSubItem(null, (iValorlido * i).ToString()));
                 i++;
             } while (i <= 10);
+
+            //Trabalhando com Vetores = sequencia de elementos
+            int[] vetor;
+            int iPrimeirovalor;
+            int soma = 0;
+            int index;
+            /*
+            vetor = new int[10];
+            vetor[0] = 20;
+            vetor[1] = 50;
+            vetor[2] = 59;
+            vetor[3] = 61;
+            vetor[4] = 75;
+            vetor[5] = 79;
+            vetor[6] = 81;
+            vetor[7] = 88;
+            vetor[8] = 93;
+            vetor[9] = 95;
+            */
+            vetor = new int[] { 10, 20, 30, 40, 50 };
+            iPrimeirovalor = vetor[0];
+            for (index = 0; index < vetor.Length; index++)
+            {
+                soma = soma + vetor[index];
+            }
+
+            /*index = 0;
+            while ( index < vetor.Length)
+            {
+                soma = soma + vetor[index];
+                index++;
+            }
+
+            index = 0;
+            do
+            {
+                soma = soma + vetor[index];
+                index++;
+            } while (index < vetor.Length);
+            */
         }
 
         private void FormEstruturasRepeticao_Load(object sender, EventArgs e)
