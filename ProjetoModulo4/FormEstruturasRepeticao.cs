@@ -60,43 +60,27 @@ namespace ProjetoModulo4
 
             //Trabalhando com Vetores = sequencia de elementos
             int[] vetor;
-            int iPrimeirovalor;
+
+            //Trabalhando com Matrizes
+            int[,] matriz;
             int soma = 0;
-            int index;
             /*
-            vetor = new int[10];
-            vetor[0] = 20;
-            vetor[1] = 50;
-            vetor[2] = 59;
-            vetor[3] = 61;
-            vetor[4] = 75;
-            vetor[5] = 79;
-            vetor[6] = 81;
-            vetor[7] = 88;
-            vetor[8] = 93;
-            vetor[9] = 95;
+            matriz = new int[3, 2];
+            matriz[0, 1] = 10;
+            matriz[0, 2] = 20;
+            matriz[1, 0] = 30;
+            matriz[1, 1] = 40;
+            matriz[2, 0] = 50;
+            matriz[2, 1] = 60;
             */
-            vetor = new int[] { 10, 20, 30, 40, 50 };
-            iPrimeirovalor = vetor[0];
-            for (index = 0; index < vetor.Length; index++)
+            matriz = new int[,] { { 10, 10, 10 }, { 25, 30, 40 } };
+            for (int linha = 0; linha < 2; linha++)
             {
-                soma = soma + vetor[index];
+                for (int coluna = 0; coluna < 3; coluna++)
+                {
+                    soma = soma + matriz[linha, coluna];
+                }
             }
-
-            /*index = 0;
-            while ( index < vetor.Length)
-            {
-                soma = soma + vetor[index];
-                index++;
-            }
-
-            index = 0;
-            do
-            {
-                soma = soma + vetor[index];
-                index++;
-            } while (index < vetor.Length);
-            */
         }
 
         private void FormEstruturasRepeticao_Load(object sender, EventArgs e)
