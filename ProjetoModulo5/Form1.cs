@@ -35,7 +35,7 @@ namespace ProjetoModulo5
                 MessageBox.Show("Arquivo existe");
             }
             else
-            {
+            { 
                 MessageBox.Show("Arquivo não existe");
                 Stream arquivo = File.Create(nomeArq);
                 arquivo.Close();
@@ -46,7 +46,7 @@ namespace ProjetoModulo5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String nomeArq = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\ProjetoModulo5\bin\Debug\Arquivo.txt";
+            String nomeArq = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Arquivo.txt";
             if (File.Exists(nomeArq))
             {
                 MessageBox.Show("Arquivo existe");
@@ -56,6 +56,20 @@ namespace ProjetoModulo5
             {
                 MessageBox.Show("Arquivo não existe");
                 
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
+            String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
+            if (!Directory.Exists(nomePasta))
+            {
+                Directory.CreateDirectory(nomePasta);
+            }
+            if (!File.Exists(nomeArq))
+            {
+                File.Create(nomeArq);
             }
         }
     }
