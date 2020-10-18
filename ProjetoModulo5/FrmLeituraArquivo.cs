@@ -106,6 +106,7 @@ namespace ProjetoModulo5
                     while ((linha = reader.ReadLine()) != null)
                     {
                         lsbConteudo.Items.Add(linha);
+
                     }
                 }
             }
