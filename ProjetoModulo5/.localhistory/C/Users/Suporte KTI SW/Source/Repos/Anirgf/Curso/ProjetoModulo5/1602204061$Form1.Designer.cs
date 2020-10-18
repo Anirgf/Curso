@@ -33,17 +33,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textNomeArquivo = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.texNomePasta = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.texNomePasta = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textNomeArquivo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -99,23 +93,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Renomear Arquivos";
             // 
-            // textNomeArquivo
-            // 
-            this.textNomeArquivo.Location = new System.Drawing.Point(15, 15);
-            this.textNomeArquivo.Name = "textNomeArquivo";
-            this.textNomeArquivo.Size = new System.Drawing.Size(100, 20);
-            this.textNomeArquivo.TabIndex = 2;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(25, 41);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Renomear";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.texNomePasta);
@@ -127,13 +104,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Renomear Diretórios";
             // 
-            // texNomePasta
-            // 
-            this.texNomePasta.Location = new System.Drawing.Point(15, 24);
-            this.texNomePasta.Name = "texNomePasta";
-            this.texNomePasta.Size = new System.Drawing.Size(100, 20);
-            this.texNomePasta.TabIndex = 1;
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(25, 50);
@@ -144,71 +114,35 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button7
+            // texNomePasta
             // 
-            this.button7.Location = new System.Drawing.Point(22, 230);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.texNomePasta.Location = new System.Drawing.Point(15, 24);
+            this.texNomePasta.Name = "texNomePasta";
+            this.texNomePasta.Size = new System.Drawing.Size(100, 20);
+            this.texNomePasta.TabIndex = 1;
             // 
-            // textBox1
+            // button6
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 200);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 53);
-            this.textBox1.TabIndex = 2;
+            this.button6.Location = new System.Drawing.Point(25, 41);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Renomear";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox2
+            // textNomeArquivo
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 270);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 53);
-            this.textBox2.TabIndex = 7;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(22, 300);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Button8";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(171, 347);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Deletar";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(22, 376);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 81);
-            this.textBox3.TabIndex = 10;
+            this.textNomeArquivo.Location = new System.Drawing.Point(15, 15);
+            this.textNomeArquivo.Name = "textNomeArquivo";
+            this.textNomeArquivo.Size = new System.Drawing.Size(100, 20);
+            this.textNomeArquivo.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 469);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
+            this.ClientSize = new System.Drawing.Size(318, 228);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
@@ -222,7 +156,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -235,15 +168,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox texNomePasta;
+        private System.Windows.Forms.TextBox texNomeArquivo;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textNomeArquivo;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

@@ -29,7 +29,7 @@ namespace ProjetoModulo5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String nomeArq = @"D:\Exemplo\Arquivo.txt";
+            String nomeArq = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\ProjetoModulo5\bin\Debug\Arquivo.txt";
             if (File.Exists(nomeArq))
             {
                 MessageBox.Show("Arquivo existe");
@@ -46,7 +46,7 @@ namespace ProjetoModulo5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String nomeArq = @"D:\Exemplo\Arquivo.txt";
+            String nomeArq = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Arquivo.txt";
             if (File.Exists(nomeArq))
             {
                 MessageBox.Show("Arquivo existe");
@@ -61,7 +61,7 @@ namespace ProjetoModulo5
 
         private void button4_Click(object sender, EventArgs e)
         {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
+            String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
             String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
             if (!Directory.Exists(nomePasta))
             {
@@ -77,7 +77,7 @@ namespace ProjetoModulo5
         {
             if (!texNomePasta.Text.Trim().Equals(String.Empty))
             {
-                String nomePasta = @"D:\Exemplo\Arquivo.txt";
+                String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
                 String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
                 if (Directory.Exists(nomePasta))
                 {
@@ -90,7 +90,7 @@ namespace ProjetoModulo5
         {
             if (!textNomeArquivo.Text.Trim().Equals(String.Empty))
             {
-                String nomePasta = @"D:\Exemplo\Arquivo.txt";
+                String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
                 String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
                 if (File.Exists(nomeArq))
                 {
@@ -101,7 +101,7 @@ namespace ProjetoModulo5
 
         private void button7_Click(object sender, EventArgs e)
         {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
+            String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
             String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
             if (File.Exists(nomeArq))
             {
@@ -112,7 +112,7 @@ namespace ProjetoModulo5
 
         private void button8_Click(object sender, EventArgs e)
         {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
+            String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
             if (Directory.Exists(nomePasta))
             {
                 DirectoryInfo directory = new DirectoryInfo(nomePasta);
@@ -122,7 +122,7 @@ namespace ProjetoModulo5
 
         private void button9_Click(object sender, EventArgs e)
         {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
+            String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
             if (Directory.Exists(nomePasta))
             {
                 //Primeira Forma

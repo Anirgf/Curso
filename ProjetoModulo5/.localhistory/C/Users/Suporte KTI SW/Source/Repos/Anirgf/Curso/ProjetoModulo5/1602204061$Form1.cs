@@ -29,7 +29,7 @@ namespace ProjetoModulo5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String nomeArq = @"D:\Exemplo\Arquivo.txt";
+            String nomeArq = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\ProjetoModulo5\bin\Debug\Arquivo.txt";
             if (File.Exists(nomeArq))
             {
                 MessageBox.Show("Arquivo existe");
@@ -46,7 +46,7 @@ namespace ProjetoModulo5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String nomeArq = @"D:\Exemplo\Arquivo.txt";
+            String nomeArq = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Arquivo.txt";
             if (File.Exists(nomeArq))
             {
                 MessageBox.Show("Arquivo existe");
@@ -61,7 +61,7 @@ namespace ProjetoModulo5
 
         private void button4_Click(object sender, EventArgs e)
         {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
+            String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
             String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
             if (!Directory.Exists(nomePasta))
             {
@@ -77,7 +77,7 @@ namespace ProjetoModulo5
         {
             if (!texNomePasta.Text.Trim().Equals(String.Empty))
             {
-                String nomePasta = @"D:\Exemplo\Arquivo.txt";
+                String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
                 String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
                 if (Directory.Exists(nomePasta))
                 {
@@ -88,54 +88,14 @@ namespace ProjetoModulo5
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (!textNomeArquivo.Text.Trim().Equals(String.Empty))
+            if (!texNomeArquivo.Text.Trim().Equals(String.Empty))
             {
-                String nomePasta = @"D:\Exemplo\Arquivo.txt";
+                String nomePasta = @"C:\Users\Suporte KTI SW\source\repos\Anirgf\Curso\ProjetoModulo5\bin\Debug\Exemplo";
                 String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
-                if (File.Exists(nomeArq))
+                if (File.Exists(nomePasta))
                 {
-                    File.Move(nomeArq, nomePasta + @"\" + textNomeArquivo.Text.Trim());
+                    File.Move(nomeArq, nomePasta + @"\" + texNomeArquivo.Text.Trim());
                 }
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
-            String nomeArq = nomePasta + @"\PrimeiroExemplo.txt";
-            if (File.Exists(nomeArq))
-            {
-                FileInfo file = new FileInfo(nomeArq);
-                textBox1.Text = String.Format("{0}{1}{2}{3}{4}", file.Name, Environment.NewLine, file.Extension, Environment.NewLine, file.Directory);
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
-            if (Directory.Exists(nomePasta))
-            {
-                DirectoryInfo directory = new DirectoryInfo(nomePasta);
-                textBox2.Text = String.Format("{0}{1}{2}", directory.Name, Environment.NewLine, directory.Root);
-            }
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            String nomePasta = @"D:\Exemplo\Arquivo.txt";
-            if (Directory.Exists(nomePasta))
-            {
-                //Primeira Forma
-                //Directory.Delete(nomePasta, true);
-
-                //Segunda Forma
-                var lista = Directory.GetFiles(nomePasta);
-                foreach (var item in lista)
-                {
-                    textBox3.Text = textBox3.Text + item + Environment.NewLine;
-                    File.Delete(item);
-                }
-                Directory.Delete(nomePasta);
             }
         }
     }
