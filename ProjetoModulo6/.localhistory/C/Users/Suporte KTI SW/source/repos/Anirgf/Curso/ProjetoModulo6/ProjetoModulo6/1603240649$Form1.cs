@@ -26,13 +26,5 @@ namespace ProjetoModulo6
         {
 
         }
-
-        private void btn0_Click(object sender, EventArgs e)
-        {
-            if (!txtDisplay.Text.Trim().Equals("0"))
-            {
-                txtDisplay.Text = txtDisplay.Text + "0";
-            }
-        }
     }
 }

@@ -282,6 +282,7 @@
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.Size = new System.Drawing.Size(321, 65);
             this.txtDisplay.TabIndex = 24;
+            this.txtDisplay.Text = "123";
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
