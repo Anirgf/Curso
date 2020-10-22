@@ -285,7 +285,7 @@
             // 
             this.txtDisplay.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.Location = new System.Drawing.Point(9, 7);
-            this.txtDisplay.MaxLength = 10;
+            this.txtDisplay.MaxLength = 3;
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.Size = new System.Drawing.Size(321, 65);

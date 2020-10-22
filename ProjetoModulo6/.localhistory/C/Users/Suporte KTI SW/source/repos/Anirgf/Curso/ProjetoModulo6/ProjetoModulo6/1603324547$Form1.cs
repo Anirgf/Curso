@@ -52,34 +52,6 @@ namespace ProjetoModulo6
             AdicionaCaracterNumerico("3");
         }
 
-        private void btn4_Click(object sender, EventArgs e)
-        {
-            AdicionaCaracterNumerico("4");
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            AdicionaCaracterNumerico("5");
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            AdicionaCaracterNumerico("6");
-        }
-
-        private void btn7_Click(object sender, EventArgs e)
-        {
-            AdicionaCaracterNumerico("7");
-        }
-
-        private void btn8_Click(object sender, EventArgs e)
-        {
-            AdicionaCaracterNumerico("8");
-        }
-
-        private void btn9_Click(object sender, EventArgs e)
-        {
-            AdicionaCaracterNumerico("9");
-        }
+        
     }
 }
