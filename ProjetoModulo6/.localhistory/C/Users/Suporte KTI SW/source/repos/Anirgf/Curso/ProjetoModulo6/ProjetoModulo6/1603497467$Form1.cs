@@ -39,11 +39,6 @@ namespace ProjetoModulo6
 
         private void AdicionarCaracterNumerico(String caracter)
         {
-            if(PressionouIgual == true)
-            {
-                txtDisplay.Clear();
-                PressionouIgual = false;
-            }
             if (txtDisplay.Text.Trim().Equals("0"))
             {
                 txtDisplay.Text = caracter;
@@ -163,20 +158,11 @@ namespace ProjetoModulo6
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            if (!txtDisplay.Text.Trim().Equals(String.Empty))
+            if (txtDisplay.Text.Trim().Equals(String.Empty))
             {
                 numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
                 Calcular();
-                PressionouIgual = true;
             }
-        }
-
-        private void btnPonto_Click(object sender, EventArgs e)
-        {
-            if (txtDisplay.Text.Trim().Equals(String.Empty)) txtDisplay.Text = "0.";
-            if (txtDisplay.Text.Trim().Contains(".")) return;
-            txtDisplay.Text = ".";
-            
         }
     }
 }

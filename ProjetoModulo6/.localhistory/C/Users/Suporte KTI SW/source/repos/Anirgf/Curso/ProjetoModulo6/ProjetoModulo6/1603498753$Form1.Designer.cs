@@ -163,7 +163,6 @@
             this.btnPonto.TabIndex = 10;
             this.btnPonto.Text = ".";
             this.btnPonto.UseVisualStyleBackColor = true;
-            this.btnPonto.Click += new System.EventHandler(this.btnPonto_Click);
             // 
             // btnAdicao
             // 

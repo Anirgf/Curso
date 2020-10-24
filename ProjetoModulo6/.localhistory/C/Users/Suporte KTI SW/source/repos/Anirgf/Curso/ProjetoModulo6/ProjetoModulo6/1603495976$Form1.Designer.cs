@@ -163,7 +163,6 @@
             this.btnPonto.TabIndex = 10;
             this.btnPonto.Text = ".";
             this.btnPonto.UseVisualStyleBackColor = true;
-            this.btnPonto.Click += new System.EventHandler(this.btnPonto_Click);
             // 
             // btnAdicao
             // 
@@ -173,7 +172,6 @@
             this.btnAdicao.TabIndex = 14;
             this.btnAdicao.Text = "+";
             this.btnAdicao.UseVisualStyleBackColor = true;
-            this.btnAdicao.Click += new System.EventHandler(this.btnAdicao_Click);
             // 
             // btnSubtracao
             // 
@@ -183,7 +181,6 @@
             this.btnSubtracao.TabIndex = 13;
             this.btnSubtracao.Text = "-";
             this.btnSubtracao.UseVisualStyleBackColor = true;
-            this.btnSubtracao.Click += new System.EventHandler(this.btnSubtracao_Click);
             // 
             // btnMutiplicacao
             // 
@@ -193,7 +190,6 @@
             this.btnMutiplicacao.TabIndex = 12;
             this.btnMutiplicacao.Text = "*";
             this.btnMutiplicacao.UseVisualStyleBackColor = true;
-            this.btnMutiplicacao.Click += new System.EventHandler(this.btnMutiplicacao_Click);
             // 
             // btnDivisao
             // 
@@ -213,7 +209,6 @@
             this.btnIgual.TabIndex = 18;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
-            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // btnUmporX
             // 
@@ -289,7 +284,6 @@
             // 
             // txtDisplay
             // 
-            this.txtDisplay.Enabled = false;
             this.txtDisplay.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.Location = new System.Drawing.Point(9, 7);
             this.txtDisplay.MaxLength = 10;

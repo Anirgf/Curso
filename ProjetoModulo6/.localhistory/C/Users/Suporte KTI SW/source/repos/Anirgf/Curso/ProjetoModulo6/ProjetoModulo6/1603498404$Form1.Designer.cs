@@ -163,7 +163,6 @@
             this.btnPonto.TabIndex = 10;
             this.btnPonto.Text = ".";
             this.btnPonto.UseVisualStyleBackColor = true;
-            this.btnPonto.Click += new System.EventHandler(this.btnPonto_Click);
             // 
             // btnAdicao
             // 
@@ -289,7 +288,6 @@
             // 
             // txtDisplay
             // 
-            this.txtDisplay.Enabled = false;
             this.txtDisplay.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.Location = new System.Drawing.Point(9, 7);
             this.txtDisplay.MaxLength = 10;

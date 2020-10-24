@@ -21,8 +21,6 @@ namespace ProjetoModulo6
         private Double numero2;
         private String operacao;
 
-        private Boolean PressionouIgual;
-
         private void Form1_Load(object sender, EventArgs e)
         {
             LimparCampo();
@@ -34,16 +32,11 @@ namespace ProjetoModulo6
             numero1 = 0;
             numero2 = 0;
             operacao = string.Empty;
-            PressionouIgual = false;
+
         }
 
         private void AdicionarCaracterNumerico(String caracter)
         {
-            if(PressionouIgual == true)
-            {
-                txtDisplay.Clear();
-                PressionouIgual = false;
-            }
             if (txtDisplay.Text.Trim().Equals("0"))
             {
                 txtDisplay.Text = caracter;
@@ -61,30 +54,6 @@ namespace ProjetoModulo6
                 numero1 = Convert.ToDouble(txtDisplay.Text.Trim());
                 operacao = caracter;
                 txtDisplay.Clear();
-            }
-        }
-
-        private void Calcular()
-        {
-            switch (operacao)
-            {
-                case "/":
-                    if(numero2 == 0)
-                    {
-                        MessageBox.Show("Divisão por zero!");
-                        break;
-                    }
-                    txtDisplay.Text = (numero1 / numero2).ToString();
-                    break;
-                case "*":
-                    txtDisplay.Text = (numero1 * numero2).ToString();
-                    break;
-                case "-":
-                    txtDisplay.Text = (numero1 - numero2).ToString();
-                    break;
-                case "+":
-                    txtDisplay.Text = (numero1 + numero2).ToString();
-                    break;
             }
         }
 
@@ -159,24 +128,6 @@ namespace ProjetoModulo6
         private void btnAdicao_Click(object sender, EventArgs e)
         {
             AdicionarCaracterOperacao("+");
-        }
-
-        private void btnIgual_Click(object sender, EventArgs e)
-        {
-            if (!txtDisplay.Text.Trim().Equals(String.Empty))
-            {
-                numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
-                Calcular();
-                PressionouIgual = true;
-            }
-        }
-
-        private void btnPonto_Click(object sender, EventArgs e)
-        {
-            if (txtDisplay.Text.Trim().Equals(String.Empty)) txtDisplay.Text = "0.";
-            if (txtDisplay.Text.Trim().Contains(".")) return;
-            txtDisplay.Text = ".";
-            
         }
     }
 }
