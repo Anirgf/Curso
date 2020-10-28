@@ -20,7 +20,6 @@ namespace ProjetoModulo6
         private Double numero1;
         private Double numero2;
         private String operacao;
-        private Double resultado;
 
         private Boolean PressionouIgual;
 
@@ -34,7 +33,6 @@ namespace ProjetoModulo6
             txtDisplay.Clear();
             numero1 = 0;
             numero2 = 0;
-            resultado = 0;
             operacao = string.Empty;
             PressionouIgual = false;
         }
@@ -71,10 +69,6 @@ namespace ProjetoModulo6
                 operacao = caracter;
                 txtDisplay.Clear();
             }
-            else
-            {
-                MessageBox.Show("Você deve informar um valor");
-            }
         }
 
         private void Calcular()
@@ -87,18 +81,18 @@ namespace ProjetoModulo6
                         MessageBox.Show("Divisão por zero!");
                         break;
                     }
-                    resultado = numero1 / numero2;
+                    txtDisplay.Text = (numero1 / numero2).ToString();
                     break;
                 case "*":
-                    resultado = numero1 * numero2;                    break;
+                    txtDisplay.Text = (numero1 * numero2).ToString();
+                    break;
                 case "-":
-                    resultado = numero1 - numero2;
+                    txtDisplay.Text = (numero1 - numero2).ToString();
                     break;
                 case "+":
-                    resultado = numero1 + numero2;
+                    txtDisplay.Text = (numero1 + numero2).ToString();
                     break;
             }
-            txtDisplay.Text = resultado.ToString().Replace(".", ",");
         }
 
         private void btn0_Click(object sender, EventArgs e)
@@ -176,22 +170,9 @@ namespace ProjetoModulo6
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            if (PressionouIgual)
-            {
-                txtDisplay.Clear();
-                PressionouIgual = false;
-                return;
-            }
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
-                if (txtDisplay.Text.Trim().Contains("."))
-                {
-                    numero2 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
-                }
-                else
-                {
-                    numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
-                }
+                numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
                 Calcular();
                 PressionouIgual = true;
             }
@@ -199,51 +180,10 @@ namespace ProjetoModulo6
 
         private void btnPonto_Click(object sender, EventArgs e)
         {
-            if (PressionouIgual)
-            {
-                txtDisplay.Text = "0.";
-                PressionouIgual = false;
-                return;
-            }
             if (txtDisplay.Text.Trim().Equals(String.Empty)) txtDisplay.Text = "0.";
             if (txtDisplay.Text.Trim().Contains(".")) return;
             txtDisplay.Text = txtDisplay.Text + ".";
-
             
-        }
-
-        private void btnC_Click(object sender, EventArgs e)
-        {
-            LimparCampo();
-        }
-
-        private void btnCE_Click(object sender, EventArgs e)
-        {
-            if(operacao.Equals(String.Empty)|| PressionouIgual)
-            {
-                LimparCampo();
-            }
-            else
-            {
-                txtDisplay.Clear();
-            }
-        }
-
-        private void btnMaisMenos_Click(object sender, EventArgs e)
-        {
-            if (!txtDisplay.Text.Trim().Equals(String.Empty))
-            {
-                txtDisplay.Text = (Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ",")) * (-1)).ToString().Replace(",", ".");
-            }
-        }
-
-        private void btnRemoveUltimoDigito_Click(object sender, EventArgs e)
-        {
-            int tam = txtDisplay.Text.Trim().Length;
-            String texto = txtDisplay.Text.Trim();
-            txtDisplay.Clear();
-            for (int i = 0; i < tam - 1; i++)
-                txtDisplay.Text = txtDisplay.Text + texto[i];
         }
     }
 }

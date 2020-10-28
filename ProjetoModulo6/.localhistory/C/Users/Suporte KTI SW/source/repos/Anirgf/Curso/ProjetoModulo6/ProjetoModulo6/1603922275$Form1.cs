@@ -73,7 +73,7 @@ namespace ProjetoModulo6
             }
             else
             {
-                MessageBox.Show("Você deve informar um valor");
+                MessageBox.Show("Voce deve informar um valor");
             }
         }
 
@@ -227,23 +227,6 @@ namespace ProjetoModulo6
             {
                 txtDisplay.Clear();
             }
-        }
-
-        private void btnMaisMenos_Click(object sender, EventArgs e)
-        {
-            if (!txtDisplay.Text.Trim().Equals(String.Empty))
-            {
-                txtDisplay.Text = (Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ",")) * (-1)).ToString().Replace(",", ".");
-            }
-        }
-
-        private void btnRemoveUltimoDigito_Click(object sender, EventArgs e)
-        {
-            int tam = txtDisplay.Text.Trim().Length;
-            String texto = txtDisplay.Text.Trim();
-            txtDisplay.Clear();
-            for (int i = 0; i < tam - 1; i++)
-                txtDisplay.Text = txtDisplay.Text + texto[i];
         }
     }
 }

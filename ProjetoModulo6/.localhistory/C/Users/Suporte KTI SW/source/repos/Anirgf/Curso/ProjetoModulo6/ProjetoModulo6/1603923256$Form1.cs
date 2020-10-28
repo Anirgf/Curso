@@ -242,7 +242,7 @@ namespace ProjetoModulo6
             int tam = txtDisplay.Text.Trim().Length;
             String texto = txtDisplay.Text.Trim();
             txtDisplay.Clear();
-            for (int i = 0; i < tam - 1; i++)
+            for (int i = 0; i < tam - i, i++)
                 txtDisplay.Text = txtDisplay.Text + texto[i];
         }
     }

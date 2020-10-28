@@ -259,7 +259,6 @@
             this.btnRemoveUltimoDigito.TabIndex = 22;
             this.btnRemoveUltimoDigito.Text = "<--";
             this.btnRemoveUltimoDigito.UseVisualStyleBackColor = true;
-            this.btnRemoveUltimoDigito.Click += new System.EventHandler(this.btnRemoveUltimoDigito_Click);
             // 
             // btnMaisMenos
             // 

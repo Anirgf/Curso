@@ -259,7 +259,6 @@
             this.btnRemoveUltimoDigito.TabIndex = 22;
             this.btnRemoveUltimoDigito.Text = "<--";
             this.btnRemoveUltimoDigito.UseVisualStyleBackColor = true;
-            this.btnRemoveUltimoDigito.Click += new System.EventHandler(this.btnRemoveUltimoDigito_Click);
             // 
             // btnMaisMenos
             // 
@@ -267,9 +266,8 @@
             this.btnMaisMenos.Name = "btnMaisMenos";
             this.btnMaisMenos.Size = new System.Drawing.Size(52, 30);
             this.btnMaisMenos.TabIndex = 21;
-            this.btnMaisMenos.Text = "+ -";
+            this.btnMaisMenos.Text = "+-";
             this.btnMaisMenos.UseVisualStyleBackColor = true;
-            this.btnMaisMenos.Click += new System.EventHandler(this.btnMaisMenos_Click);
             // 
             // btnCE
             // 

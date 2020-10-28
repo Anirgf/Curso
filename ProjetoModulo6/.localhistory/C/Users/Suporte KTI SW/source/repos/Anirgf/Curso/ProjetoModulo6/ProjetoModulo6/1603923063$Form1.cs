@@ -236,14 +236,5 @@ namespace ProjetoModulo6
                 txtDisplay.Text = (Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ",")) * (-1)).ToString().Replace(",", ".");
             }
         }
-
-        private void btnRemoveUltimoDigito_Click(object sender, EventArgs e)
-        {
-            int tam = txtDisplay.Text.Trim().Length;
-            String texto = txtDisplay.Text.Trim();
-            txtDisplay.Clear();
-            for (int i = 0; i < tam - 1; i++)
-                txtDisplay.Text = txtDisplay.Text + texto[i];
-        }
     }
 }
