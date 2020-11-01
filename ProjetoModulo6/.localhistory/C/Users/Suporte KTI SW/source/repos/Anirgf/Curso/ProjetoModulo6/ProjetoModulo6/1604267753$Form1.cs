@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoModulo6
@@ -40,10 +47,13 @@ namespace ProjetoModulo6
                 PressionouIgual = false;
             }
             if (txtDisplay.Text.Trim().Equals("0"))
+            {
                 txtDisplay.Text = caracter;
+            }
             else
+            {
                 txtDisplay.Text = txtDisplay.Text + caracter;
-            
+            }
         }
 
         private void AdicionarCaracterOperacao(String caracter)
@@ -51,15 +61,20 @@ namespace ProjetoModulo6
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
                 if (txtDisplay.Text.Trim().Contains("."))
+                {
                     numero1 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
+                }
                 else
+                {
                     numero1 = Convert.ToDouble(txtDisplay.Text.Trim());
-                 operacao = caracter;
+                }
+                operacao = caracter;
                 txtDisplay.Clear();
             }
             else
+            {
                 MessageBox.Show("Você deve informar um valor");
-            
+            }
         }
 
         private void Calcular()
@@ -98,8 +113,9 @@ namespace ProjetoModulo6
         private void btn0_Click(object sender, EventArgs e)
         {
             if (!txtDisplay.Text.Trim().Equals("0"))
+            {
                 txtDisplay.Text = txtDisplay.Text + "0";
-            
+            }
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -178,9 +194,13 @@ namespace ProjetoModulo6
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
                 if (txtDisplay.Text.Trim().Contains("."))
+                {
                     numero2 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
+                }
                 else
+                {
                     numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
+                }
                 Calcular();
                 PressionouIgual = true;
             }
@@ -194,10 +214,8 @@ namespace ProjetoModulo6
                 PressionouIgual = false;
                 return;
             }
-            if (txtDisplay.Text.Trim().Equals(String.Empty))
-                txtDisplay.Text = "0.";
-            if (txtDisplay.Text.Trim().Contains("."))
-                return;
+            if (txtDisplay.Text.Trim().Equals(String.Empty)) txtDisplay.Text = "0.";
+            if (txtDisplay.Text.Trim().Contains(".")) return;
             txtDisplay.Text = txtDisplay.Text + ".";
 
             
@@ -211,15 +229,21 @@ namespace ProjetoModulo6
         private void btnCE_Click(object sender, EventArgs e)
         {
             if(operacao.Equals(String.Empty)|| PressionouIgual)
-            LimparCampo();
+            {
+                LimparCampo();
+            }
             else
-            txtDisplay.Clear();
+            {
+                txtDisplay.Clear();
+            }
         }
 
         private void btnMaisMenos_Click(object sender, EventArgs e)
         {
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
+            {
                 txtDisplay.Text = (Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ",")) * (-1)).ToString().Replace(",", ".");
+            }
         }
 
         private void btnRemoveUltimoDigito_Click(object sender, EventArgs e)
@@ -237,8 +261,8 @@ namespace ProjetoModulo6
             {
                 numero1 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
                 numero2 = 2;
-                resultado = CalcularPotencia();
-                txtDisplay.Text = resultado.ToString().Replace(",", ".");
+                var result = CalcularPotencia();
+                txtDisplay.Text = result.ToString().Replace(",", ".");
                 PressionouIgual = true;
             }
         }
@@ -246,33 +270,6 @@ namespace ProjetoModulo6
         private void btnPotenciacao_Click(object sender, EventArgs e)
         {
             AdicionarCaracterOperacao("^");
-        }
-
-        private void btnRaizquadrada_Click(object sender, EventArgs e)
-        {
-            if (!txtDisplay.Text.Trim().Equals(String.Empty))
-            {
-                numero1 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
-                resultado = Math.Sqrt(numero1);
-                txtDisplay.Text = resultado.ToString().Replace(",", ".");
-                PressionouIgual = true;
-            }
-        }
-
-        private void btnUmporX_Click(object sender, EventArgs e)
-        {
-            if (!txtDisplay.Text.Trim().Equals(String.Empty))
-            {
-                numero1 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
-                if(numero1 == 0)
-                {
-                    MessageBox.Show("Erro. Divisão por zero!");
-                    return;
-                }
-                resultado = 1 / numero1;
-                txtDisplay.Text = resultado.ToString().Replace(",", ".");
-                PressionouIgual = true;
-            }
         }
     }
 }

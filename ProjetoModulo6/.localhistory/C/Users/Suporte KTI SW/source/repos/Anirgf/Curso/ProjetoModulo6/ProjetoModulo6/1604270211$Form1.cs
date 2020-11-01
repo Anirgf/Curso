@@ -39,10 +39,8 @@ namespace ProjetoModulo6
                 txtDisplay.Clear();
                 PressionouIgual = false;
             }
-            if (txtDisplay.Text.Trim().Equals("0"))
-                txtDisplay.Text = caracter;
-            else
-                txtDisplay.Text = txtDisplay.Text + caracter;
+            if (txtDisplay.Text.Trim().Equals("0")) txtDisplay.Text = caracter;
+            else txtDisplay.Text = txtDisplay.Text + caracter;
             
         }
 
@@ -51,15 +49,20 @@ namespace ProjetoModulo6
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
                 if (txtDisplay.Text.Trim().Contains("."))
+                {
                     numero1 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
+                }
                 else
+                {
                     numero1 = Convert.ToDouble(txtDisplay.Text.Trim());
-                 operacao = caracter;
+                }
+                operacao = caracter;
                 txtDisplay.Clear();
             }
             else
+            {
                 MessageBox.Show("Você deve informar um valor");
-            
+            }
         }
 
         private void Calcular()
@@ -98,8 +101,9 @@ namespace ProjetoModulo6
         private void btn0_Click(object sender, EventArgs e)
         {
             if (!txtDisplay.Text.Trim().Equals("0"))
+            {
                 txtDisplay.Text = txtDisplay.Text + "0";
-            
+            }
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -178,9 +182,13 @@ namespace ProjetoModulo6
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
             {
                 if (txtDisplay.Text.Trim().Contains("."))
+                {
                     numero2 = Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ","));
+                }
                 else
+                {
                     numero2 = Convert.ToDouble(txtDisplay.Text.Trim());
+                }
                 Calcular();
                 PressionouIgual = true;
             }
@@ -194,10 +202,8 @@ namespace ProjetoModulo6
                 PressionouIgual = false;
                 return;
             }
-            if (txtDisplay.Text.Trim().Equals(String.Empty))
-                txtDisplay.Text = "0.";
-            if (txtDisplay.Text.Trim().Contains("."))
-                return;
+            if (txtDisplay.Text.Trim().Equals(String.Empty)) txtDisplay.Text = "0.";
+            if (txtDisplay.Text.Trim().Contains(".")) return;
             txtDisplay.Text = txtDisplay.Text + ".";
 
             
@@ -211,15 +217,21 @@ namespace ProjetoModulo6
         private void btnCE_Click(object sender, EventArgs e)
         {
             if(operacao.Equals(String.Empty)|| PressionouIgual)
-            LimparCampo();
+            {
+                LimparCampo();
+            }
             else
-            txtDisplay.Clear();
+            {
+                txtDisplay.Clear();
+            }
         }
 
         private void btnMaisMenos_Click(object sender, EventArgs e)
         {
             if (!txtDisplay.Text.Trim().Equals(String.Empty))
+            {
                 txtDisplay.Text = (Convert.ToDouble(txtDisplay.Text.Trim().Replace(".", ",")) * (-1)).ToString().Replace(",", ".");
+            }
         }
 
         private void btnRemoveUltimoDigito_Click(object sender, EventArgs e)

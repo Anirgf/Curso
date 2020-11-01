@@ -223,7 +223,6 @@
             this.btnUmporX.TabIndex = 17;
             this.btnUmporX.Text = "1/x";
             this.btnUmporX.UseVisualStyleBackColor = true;
-            this.btnUmporX.Click += new System.EventHandler(this.btnUmporX_Click);
             // 
             // btnRaizquadrada
             // 
@@ -233,7 +232,6 @@
             this.btnRaizquadrada.TabIndex = 16;
             this.btnRaizquadrada.Text = "sqrt";
             this.btnRaizquadrada.UseVisualStyleBackColor = true;
-            this.btnRaizquadrada.Click += new System.EventHandler(this.btnRaizquadrada_Click);
             // 
             // btnPotenciacao
             // 
@@ -243,7 +241,6 @@
             this.btnPotenciacao.TabIndex = 15;
             this.btnPotenciacao.Text = "^";
             this.btnPotenciacao.UseVisualStyleBackColor = true;
-            this.btnPotenciacao.Click += new System.EventHandler(this.btnPotenciacao_Click);
             // 
             // btnElevaQuadrado
             // 
@@ -253,7 +250,6 @@
             this.btnElevaQuadrado.TabIndex = 23;
             this.btnElevaQuadrado.Text = "^2";
             this.btnElevaQuadrado.UseVisualStyleBackColor = true;
-            this.btnElevaQuadrado.Click += new System.EventHandler(this.btnElevaQuadrado_Click);
             // 
             // btnRemoveUltimoDigito
             // 
@@ -337,7 +333,6 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
-            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
