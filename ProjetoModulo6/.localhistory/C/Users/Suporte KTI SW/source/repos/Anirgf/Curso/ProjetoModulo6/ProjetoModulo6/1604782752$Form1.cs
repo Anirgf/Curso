@@ -274,10 +274,5 @@ namespace ProjetoModulo6
                 PressionouIgual = true;
             }
         }
-
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            txtDisplay.Text = Keys.NumPad1.ToString();
-        }
     }
 }

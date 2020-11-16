@@ -277,7 +277,7 @@ namespace ProjetoModulo6
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtDisplay.Text = Keys.NumPad1.ToString();
+            txtDisplay.Text = Convert.ToString(e.KeyChar);
         }
     }
 }
