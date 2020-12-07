@@ -28,20 +28,8 @@ namespace ProjetoModulo8
             {
                 conexao.Open();
                 MessageBox.Show("Conexão criada com sucesso!");
-                MySqlCommand comando = new MySqlCommand();
-                comando = conexao.CreateCommand();
-
-                comando.CommandText = "select nome from usuarios where id = 1;";
-                MySqlDataReader reader = comando.ExecuteReader();
-                while (reader.Read())
-                {
-                    if (reader["nome"] != null)
-                    {
-                        MessageBox.Show(reader["nome"].ToString());
-                    }
-                }
             }
-            catch (MySqlException msqle)
+            catch(MySqlException msqle)
             {
                 MessageBox.Show("Erro de acesso ao MySQL: " + msqle.Message, "Erro");
             }
