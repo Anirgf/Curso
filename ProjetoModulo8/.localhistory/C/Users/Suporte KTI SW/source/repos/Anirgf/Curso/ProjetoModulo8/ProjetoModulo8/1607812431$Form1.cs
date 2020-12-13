@@ -14,14 +14,80 @@ namespace ProjetoModulo8
 
         private void button1_Click(object sender, EventArgs e)
         {
+            using (MySqlConnection conexao = ConexaoBD.getInstancia().getConexao())
+            {
 
-            MessageBox.Show(new UsuarioBD().BuscarNome(Convert.ToInt32(txtIdBusca.Text.Trim())));
+                try
+                {
+                    conexao.Open();
+                    MessageBox.Show("Conexão criada com sucesso!");
+                    MySqlCommand comando = new MySqlCommand();
+                    comando = conexao.CreateCommand();
+                    if (txtIdBusca.Text.Trim().Equals(string.Empty))
+                    {
+                        comando.CommandText = "select nome from usuarios;";
+                    }
+                    else
+                    {
+                        comando.CommandText = "select nome from usuarios where id = @id;";
+                        comando.Parameters.AddWithValue("id", Convert.ToInt32(txtIdBusca.Text.Trim()));
+                    }
+
+
+                    MySqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        if (reader["nome"] != null)
+                        {
+                            MessageBox.Show(reader["nome"].ToString());
+                        }
+                    }
+                }
+                catch (MySqlException msqle)
+                {
+                    MessageBox.Show("Erro de acesso ao MySQL: " + msqle.Message, "Erro");
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UsuarioBD usu = new UsuarioBD();
-            usu.InserirUsuario(txtNome.Text.Trim());
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
+            MySqlConnection conexao = new MySqlConnection(conn);
+
+            try
+            {
+                conexao.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando = conexao.CreateCommand();
+
+                comando.CommandText = "insert into usuarios(nome) values (@nome);";
+                comando.Parameters.AddWithValue("nome", txtNome.Text.Trim());
+                if (txtNome.Text.Trim().Equals(string.Empty))
+                {
+                    MessageBox.Show("Campo vazio!");
+                }
+                return;
+
+                int valorRetorno = comando.ExecuteNonQuery();
+                if (valorRetorno > 1)
+                    MessageBox.Show("Erro ao inserir!");
+                else
+                    MessageBox.Show("Inserido com sucesso!");
+               
+            }
+            catch (MySqlException msqle)
+            {
+                MessageBox.Show("Erro de acesso ao MySQL: " + msqle.Message, "Erro");
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         private void Update_Click(object sender, EventArgs e)

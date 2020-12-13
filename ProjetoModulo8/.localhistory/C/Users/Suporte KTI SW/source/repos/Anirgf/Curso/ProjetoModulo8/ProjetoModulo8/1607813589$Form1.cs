@@ -14,8 +14,8 @@ namespace ProjetoModulo8
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show(new UsuarioBD().BuscarNome(Convert.ToInt32(txtIdBusca.Text.Trim())));
+            UsuarioBD usu = new UsuarioBD();
+            MessageBox.Show(usu.BuscarNome(Convert.ToInt32(txtIdBusca.Text.Trim())));
         }
 
         private void button2_Click(object sender, EventArgs e)

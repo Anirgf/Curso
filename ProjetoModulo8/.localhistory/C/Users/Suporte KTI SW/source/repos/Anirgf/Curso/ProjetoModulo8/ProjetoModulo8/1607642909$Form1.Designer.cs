@@ -40,7 +40,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.txtId2 = new System.Windows.Forms.TextBox();
-            this.txtIdBusca = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -86,7 +85,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtIdBusca);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(18, 12);
             this.groupBox2.Name = "groupBox2";
@@ -156,13 +154,6 @@
             this.txtId2.Size = new System.Drawing.Size(55, 20);
             this.txtId2.TabIndex = 1;
             // 
-            // txtIdBusca
-            // 
-            this.txtIdBusca.Location = new System.Drawing.Point(203, 19);
-            this.txtIdBusca.Name = "txtIdBusca";
-            this.txtIdBusca.Size = new System.Drawing.Size(55, 20);
-            this.txtIdBusca.TabIndex = 3;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +168,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -200,7 +190,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.TextBox txtId2;
-        private System.Windows.Forms.TextBox txtIdBusca;
     }
 }
 
