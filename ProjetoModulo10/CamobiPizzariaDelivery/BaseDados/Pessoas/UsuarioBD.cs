@@ -31,7 +31,7 @@ namespace BaseDados.Pessoas
                         oUsuario.Nome = reader["Nome"].ToString();
                         oUsuario.Login = reader["login"].ToString();
                         oUsuario.Senha = reader["senha"].ToString();
-                        oUsuario.Status = (Status)Convert.ToInt16(reader["situacao"].ToString());
+                        oUsuario.Status = (Status)Convert.ToInt16(reader["situacao"]);
                         oUsuario.DtAlteracao = Convert.ToDateTime(reader["dt_alteracao"].ToString());
                         oUsuario.CodigoUsrAlteracao = Convert.ToInt32(reader["codigo_usr_alteracao"].ToString());
 
